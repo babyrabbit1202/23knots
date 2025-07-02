@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>救災隊必學的23個繩結 - 紅十字會推薦課程</title>
+    <meta name="description" content="學習紅十字會救災隊必學的23個基本繩結，四單元完整課程，適合戶外愛好者和救援志工">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js for interactions -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Hero Section -->
+    <section class="gradient-bg hero-pattern min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center text-white">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    救災隊必學的<span class="text-yellow-300">23個繩結</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">
+                    紅十字會推薦，全面掌握救援繩結技巧
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-3 sm:flex sm:justify-center sm:flex-wrap">
+                    <a href="#learning-outcomes" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-play mr-2"></i>開始學習
+                    </a>
+                    <a href="#review-section" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-book-reader mr-2"></i>課前複習
+                    </a>
+                    <a href="#quiz-section" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-question-circle mr-2"></i>知識測驗
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Learning Outcomes Section -->
+    <section id="learning-outcomes" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">你將學到什麼？</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-red-600 text-4xl mb-4">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">專業繩結技能</h3>
+                        <p class="text-gray-600">學習紅十字會救災隊必學的23個基本繩結</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">完整課程體系</h3>
+                        <p class="text-gray-600">共四單元學習，包含打法與實際應用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Introduction Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">課程介紹</h2>
+                
+                <div class="space-y-4" x-data="{ activeAccordion: null }">
+                    <!-- Unit 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button 
+                            @click="activeAccordion = activeAccordion === 1 ? null : 1"
+                            class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-200"
+                        >
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">第一單元：基礎繩結</h3>
+                                    <p class="text-sm text-gray-600 mt-1">繩結術語與基本技巧</p>
+                                </div>
+                                <i class="fas fa-chevron-down transform transition-transform duration-200" 
+                                   :class="activeAccordion === 1 ? 'rotate-180' : ''"></i>
+                            </div>
+                        </button>
+                        <div 
+                            x-show="activeAccordion === 1" 
+                            x-transition:enter="transition ease-out duration-200"
+                            x-transition:enter-start="opacity-0 transform -translate-y-2"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                            class="px-6 py-4 bg-white"
+                        >
+                            <!-- Video Section -->
+                            <div class="mb-6">
+                                <div class="aspect-w-16 aspect-h-9 mb-4">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/hHD_X_F4t_U" 
+                                        class="w-full h-64 md:h-80 rounded-lg shadow-md"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <p class="text-sm text-gray-500 text-center mb-4">
+                                    <i class="fas fa-play-circle mr-1"></i>單元一教學影片
+                                </p>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-3">學習內容：</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>繩結術語與細節</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>單結、平結、八字結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>栓馬結、稱人結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>蝴蝶結、繩上八字結</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Unit 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button 
+                            @click="activeAccordion = activeAccordion === 2 ? null : 2"
+                            class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-200"
+                        >
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">第二單元：連結繩結</h3>
+                                    <p class="text-sm text-gray-600 mt-1">繩索連接與套環技巧</p>
+                                </div>
+                                <i class="fas fa-chevron-down transform transition-transform duration-200" 
+                                   :class="activeAccordion === 2 ? 'rotate-180' : ''"></i>
+                            </div>
+                        </button>
+                        <div 
+                            x-show="activeAccordion === 2" 
+                            x-transition:enter="transition ease-out duration-200"
+                            x-transition:enter-start="opacity-0 transform -translate-y-2"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                            class="px-6 py-4 bg-white"
+                        >
+                            <!-- Video Section -->
+                            <div class="mb-6">
+                                <div class="aspect-w-16 aspect-h-9 mb-4">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/BAlonkkH0P4" 
+                                        class="w-full h-64 md:h-80 rounded-lg shadow-md"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <p class="text-sm text-gray-500 text-center mb-4">
+                                    <i class="fas fa-play-circle mr-1"></i>單元二教學影片
+                                </p>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-3">學習內容：</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>漁人結、接索結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>八字接索結、水結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>雙圈雙扣</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>八字套環、雙八字套環</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Unit 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button 
+                            @click="activeAccordion = activeAccordion === 3 ? null : 3"
+                            class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-200"
+                        >
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">第三單元：固定繩結</h3>
+                                    <p class="text-sm text-gray-600 mt-1">繫船結與座位席結</p>
+                                </div>
+                                <i class="fas fa-chevron-down transform transition-transform duration-200" 
+                                   :class="activeAccordion === 3 ? 'rotate-180' : ''"></i>
+                            </div>
+                        </button>
+                        <div 
+                            x-show="activeAccordion === 3" 
+                            x-transition:enter="transition ease-out duration-200"
+                            x-transition:enter-start="opacity-0 transform -translate-y-2"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                            class="px-6 py-4 bg-white"
+                        >
+                            <!-- Video Section -->
+                            <div class="mb-6">
+                                <div class="aspect-w-16 aspect-h-9 mb-4">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/0BmAnQRGmJ0" 
+                                        class="w-full h-64 md:h-80 rounded-lg shadow-md"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <p class="text-sm text-gray-500 text-center mb-4">
+                                    <i class="fas fa-play-circle mr-1"></i>單元三教學影片
+                                </p>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-3">學習內容：</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>二重繫船結、三重繫船結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>座位席結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>扁帶座位席結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>纏身結</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Unit 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button 
+                            @click="activeAccordion = activeAccordion === 4 ? null : 4"
+                            class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-200"
+                        >
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800">第四單元：進階技巧</h3>
+                                    <p class="text-sm text-gray-600 mt-1">特殊用途繩結</p>
+                                </div>
+                                <i class="fas fa-chevron-down transform transition-transform duration-200" 
+                                   :class="activeAccordion === 4 ? 'rotate-180' : ''"></i>
+                            </div>
+                        </button>
+                        <div 
+                            x-show="activeAccordion === 4" 
+                            x-transition:enter="transition ease-out duration-200"
+                            x-transition:enter-start="opacity-0 transform -translate-y-2"
+                            x-transition:enter-end="opacity-100 transform translate-y-0"
+                            class="px-6 py-4 bg-white"
+                        >
+                            <!-- Video Section -->
+                            <div class="mb-6">
+                                <div class="aspect-w-16 aspect-h-9 mb-4">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/odGbDszzQbk" 
+                                        class="w-full h-64 md:h-80 rounded-lg shadow-md"
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <p class="text-sm text-gray-500 text-center mb-4">
+                                    <i class="fas fa-play-circle mr-1"></i>單元四教學影片
+                                </p>
+                            </div>
+                            
+                            <p class="text-gray-700 mb-3">學習內容：</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>負荷釋放結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>節結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>繩盤結</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>蝴蝶繩環收繩</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knot Gallery Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">23個繩結完整圖解</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    詳細圖解展示每個繩結的標準完成狀態，讓您清楚掌握每種繩結的正確形態
+                </p>
+                
+                <!-- Unit Tabs -->
+                <div class="mb-8" x-data="{ activeTab: 1 }">
+                    <!-- Tab Navigation -->
+                    <div class="flex flex-wrap justify-center mb-8 border-b border-gray-200">
+                        <button 
+                            @click="activeTab = 1"
+                            :class="activeTab === 1 ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                            class="px-6 py-3 border-b-2 font-medium text-sm transition duration-200"
+                        >
+                            單元一：基礎繩結
+                        </button>
+                        <button 
+                            @click="activeTab = 2"
+                            :class="activeTab === 2 ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                            class="px-6 py-3 border-b-2 font-medium text-sm transition duration-200"
+                        >
+                            單元二：連結繩結
+                        </button>
+                        <button 
+                            @click="activeTab = 3"
+                            :class="activeTab === 3 ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                            class="px-6 py-3 border-b-2 font-medium text-sm transition duration-200"
+                        >
+                            單元三：固定繩結
+                        </button>
+                        <button 
+                            @click="activeTab = 4"
+                            :class="activeTab === 4 ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                            class="px-6 py-3 border-b-2 font-medium text-sm transition duration-200"
+                        >
+                            單元四：進階技巧
+                        </button>
+                    </div>
+
+                    <!-- Unit 1 Content -->
+                    <div x-show="activeTab === 1" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center">第一單元：基礎繩結圖解</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot1.jpg/單結.png" alt="單結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">單結</h4>
+                                    <div class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded mb-2 text-center knot-function-badge">
+                                        <i class="fas fa-info-circle mr-1"></i>基礎止結
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center knot-description">最基本的繩結，用於防止繩索滑脫或作為其他繩結的基礎。簡單易學，是所有繩結的起點。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot1.jpg/平結.png" alt="平結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">平結</h4>
+                                    <div class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded mb-2 text-center knot-function-badge">
+                                        <i class="fas fa-link mr-1"></i>繩索連接
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center knot-description">用於連接兩條同粗細的繩索，平整對稱，適合輕度負重使用。注意不同粗細繩索勿用。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot1.jpg/八字結.png" alt="八字結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">八字結</h4>
+                                    <div class="text-xs text-red-600 bg-red-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-shield-alt mr-1"></i>重要止端結
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">重要的止端結，防止繩索從設備中滑出。形狀如數字8，強度高且不易鬆脫。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot1.jpg/栓馬結.png" alt="栓馬結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">栓馬結</h4>
+                                    <div class="text-xs text-purple-600 bg-purple-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-anchor mr-1"></i>快速固定
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">快速固定繩索到柱子的方法，可調節鬆緊，適合臨時固定需求。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot1.jpg/稱人結.png" alt="稱人結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">稱人結</h4>
+                                    <div class="text-xs text-orange-600 bg-orange-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-crown mr-1"></i>繩結之王
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">形成固定大小的環圈，不會因拉力而收緊或鬆開。救援中用於製作固定點。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot1.jpg/蝴蝶結.png" alt="蝴蝶結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">蝴蝶結</h4>
+                                    <div class="text-xs text-indigo-600 bg-indigo-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-dot-circle mr-1"></i>中間固定點
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">在繩索中間製作固定點，不影響繩索兩端的使用。適合多人同時使用一條繩索。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot1.jpg/繩上八字結.png" alt="繩上八字結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">繩上八字結</h4>
+                                    <div class="text-xs text-teal-600 bg-teal-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-circle-notch mr-1"></i>中間止結
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">在繩索中間位置打的八字結，提供中間固定點同時保持繩索完整性。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 2 Content -->
+                    <div x-show="activeTab === 2" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center">第二單元：連結繩結圖解</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot2.jpg/漁人結.png" alt="漁人結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">漁人結</h4>
+                                    <div class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-link mr-1"></i>繩索連接
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">可靠的繩索連接方法，適合同粗細繩索。結構緊密，承重能力佳。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot2.jpg/接索結.png" alt="接索結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">接索結</h4>
+                                    <div class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-bolt mr-1"></i>快速連接
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">簡單快速的繩索連接方式，適合輕度使用場合。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot2.jpg/八字接索結.png" alt="八字接索結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">八字接索結</h4>
+                                    <div class="text-xs text-red-600 bg-red-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-shield-alt mr-1"></i>強力連接
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">結合八字結的穩定性與接索功能，強度高且安全可靠。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot2.jpg/水結.png" alt="水結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">水結</h4>
+                                    <div class="text-xs text-purple-600 bg-purple-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-exchange-alt mr-1"></i>異徑連接
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">專用於連接不同粗細繩索的繩結，結構穩定，適應性強。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot2.jpg/雙圈雙扣.png" alt="雙圈雙扣" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">雙圈雙扣</h4>
+                                    <div class="text-xs text-orange-600 bg-orange-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-plus mr-1"></i>強化固定
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">增強版的固定方式，提供額外的安全保障和穩定性。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot2.jpg/八字套環.png" alt="八字套環" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">八字套環</h4>
+                                    <div class="text-xs text-indigo-600 bg-indigo-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-circle mr-1"></i>固定環圈
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">在繩索末端形成固定環圈，常用於連接設備或製作固定點。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot2.jpg/雙八字套環.png" alt="雙八字套環" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">雙八字套環</h4>
+                                    <div class="text-xs text-teal-600 bg-teal-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-certificate mr-1"></i>雙重安全
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">強化版八字套環，提供更高安全性，適合重要固定點使用。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 3 Content -->
+                    <div x-show="activeTab === 3" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center">第三單元：固定繩結圖解</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot3.jpg/二重繫船結.png" alt="二重繫船結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">二重繫船結</h4>
+                                    <div class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-anchor mr-1"></i>標準繫船
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">標準的繫船方式，可快速固定且容易解開，適合中等負重。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot3.jpg/三重繫船結.png" alt="三重繫船結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">三重繫船結</h4>
+                                    <div class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-shield-alt mr-1"></i>強化繫船
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">增強版繫船結，提供更高的安全性和穩定性，適合重要固定作業。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot3.jpg/座位席結.png" alt="座位席結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">座位席結</h4>
+                                    <div class="text-xs text-red-600 bg-red-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-user mr-1"></i>救援吊帶
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">製作簡易安全吊帶，可承受人體重量，緊急救援時的重要技能。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot3.jpg/扁帶座位席結.png" alt="扁帶座位席結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">扁帶座位席結</h4>
+                                    <div class="text-xs text-purple-600 bg-purple-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-star mr-1"></i>舒適吊帶
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">使用扁帶製作的座位席結，分散壓力更舒適，承重能力更強。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot3.jpg/缠身結.png" alt="纏身結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">纏身結</h4>
+                                    <div class="text-xs text-orange-600 bg-orange-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-layer-group mr-1"></i>全身束縛
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">全身安全束縛系統，提供多點固定，適合複雜救援環境。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 4 Content -->
+                    <div x-show="activeTab === 4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center">第四單元：進階技巧圖解</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot4.jpg/負荷釋放結.png" alt="負荷釋放結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">負荷釋放結</h4>
+                                    <div class="text-xs text-red-600 bg-red-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-exclamation-triangle mr-1"></i>緊急脫困
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">特殊救援結，可在承重狀態下快速解開，緊急脫困的重要技能。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot4.jpg/節結.png" alt="節結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">節結</h4>
+                                    <div class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-compress-alt mr-1"></i>繩長調節
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">用於縮短繩索長度或跳過繩索損壞部分，保持繩索功能性。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot4.jpg/繩盤結.png" alt="繩盤結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">繩盤結</h4>
+                                    <div class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-layer-group mr-1"></i>整齊收納
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">整齊收納長繩索的技巧，防止糾結並便於快速部署使用。</p>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                                <img src="knot4.jpg/蝴蝶繩結.png" alt="蝴蝶繩結" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h4 class="font-semibold text-gray-800 text-center mb-2">蝴蝶繩結</h4>
+                                    <div class="text-xs text-purple-600 bg-purple-50 px-2 py-1 rounded mb-2 text-center">
+                                        <i class="fas fa-gift mr-1"></i>美觀收納
+                                    </div>
+                                    <p class="text-sm text-gray-600 text-center">專業繩索收納方式，結合美觀與實用性，便於攜帶和使用。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center mt-12">
+                    <p class="text-gray-600 mb-4">想要學習這些繩結的打法嗎？</p>
+                    <a href="#learning-outcomes" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        <i class="fas fa-video mr-2"></i>觀看教學影片
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section id="review-section" class="py-16 bg-gradient-to-br from-purple-50 to-indigo-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">測驗前複習</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    在進行測驗之前，讓我們快速複習一下23個繩結的重要功能和應用場景
+                </p>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8" x-data="reviewApp()">
+                    <!-- Review Navigation -->
+                    <div class="flex flex-wrap justify-center mb-8 border-b border-gray-200">
+                        <button 
+                            @click="activeUnit = 1"
+                            :class="activeUnit === 1 ? 'border-purple-500 text-purple-600 bg-purple-50' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                            class="px-4 py-3 border-b-2 font-medium text-sm transition duration-200 mx-1 rounded-t-lg"
+                        >
+                            <i class="fas fa-circle mr-2"></i>基礎繩結
+                        </button>
+                        <button 
+                            @click="activeUnit = 2"
+                            :class="activeUnit === 2 ? 'border-purple-500 text-purple-600 bg-purple-50' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                            class="px-4 py-3 border-b-2 font-medium text-sm transition duration-200 mx-1 rounded-t-lg"
+                        >
+                            <i class="fas fa-link mr-2"></i>連結繩結
+                        </button>
+                        <button 
+                            @click="activeUnit = 3"
+                            :class="activeUnit === 3 ? 'border-purple-500 text-purple-600 bg-purple-50' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                            class="px-4 py-3 border-b-2 font-medium text-sm transition duration-200 mx-1 rounded-t-lg"
+                        >
+                            <i class="fas fa-anchor mr-2"></i>固定繩結
+                        </button>
+                        <button 
+                            @click="activeUnit = 4"
+                            :class="activeUnit === 4 ? 'border-purple-500 text-purple-600 bg-purple-50' : 'border-transparent text-gray-500 hover:text-gray-700'"
+                            class="px-4 py-3 border-b-2 font-medium text-sm transition duration-200 mx-1 rounded-t-lg"
+                        >
+                            <i class="fas fa-cogs mr-2"></i>進階技巧
+                        </button>
+                    </div>
+
+                    <!-- Unit 1: Basic Knots -->
+                    <div x-show="activeUnit === 1" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                        <h3 class="text-2xl font-semibold text-purple-800 mb-6 text-center">第一單元：基礎繩結複習</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot1.jpg/單結.png" alt="單結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">單結</h4>
+                                <p class="text-sm text-gray-600">最基本的繩結，用於防止繩索滑脫或作為其他繩結的基礎。簡單易學，是所有繩結的起點。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot1.jpg/平結.png" alt="平結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">平結</h4>
+                                <p class="text-sm text-gray-600">用於連接兩條同粗細的繩索，平整對稱，適合輕度負重使用。注意不同粗細繩索勿用。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot1.jpg/八字結.png" alt="八字結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">八字結</h4>
+                                <p class="text-sm text-gray-600">重要的止端結，防止繩索從設備中滑出。形狀如數字8，強度高且不易鬆脫。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot1.jpg/栓馬結.png" alt="栓馬結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">栓馬結</h4>
+                                <p class="text-sm text-gray-600">快速固定繩索到柱子的方法，可調節鬆緊，適合臨時固定需求。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot1.jpg/稱人結.png" alt="稱人結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">稱人結</h4>
+                                <p class="text-sm text-gray-600">形成固定大小的環圈，不會因拉力而收緊或鬆開。救援中用於製作固定點。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot1.jpg/蝴蝶結.png" alt="蝴蝶結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">蝴蝶結</h4>
+                                <p class="text-sm text-gray-600">在繩索中間製作固定點，不影響繩索兩端的使用。適合多人同時使用一條繩索。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot1.jpg/繩上八字結.png" alt="繩上八字結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">繩上八字結</h4>
+                                <p class="text-sm text-gray-600">在繩索中間位置打的八字結，提供中間固定點同時保持繩索完整性。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 2: Connection Knots -->
+                    <div x-show="activeUnit === 2" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                        <h3 class="text-2xl font-semibold text-purple-800 mb-6 text-center">第二單元：連結繩結複習</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot2.jpg/漁人結.png" alt="漁人結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">漁人結</h4>
+                                <p class="text-sm text-gray-600">可靠的繩索連接方法，適合同粗細繩索。結構緊密，承重能力佳。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot2.jpg/接索結.png" alt="接索結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">接索結</h4>
+                                <p class="text-sm text-gray-600">簡單快速的繩索連接方式，適合輕度使用場合。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot2.jpg/八字接索結.png" alt="八字接索結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">八字接索結</h4>
+                                <p class="text-sm text-gray-600">結合八字結的穩定性與接索功能，強度高且安全可靠。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot2.jpg/水結.png" alt="水結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">水結</h4>
+                                <p class="text-sm text-gray-600">專用於連接不同粗細繩索的繩結，結構穩定，適應性強。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot2.jpg/雙圈雙扣.png" alt="雙圈雙扣" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">雙圈雙扣</h4>
+                                <p class="text-sm text-gray-600">增強版的固定方式，提供額外的安全保障和穩定性。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot2.jpg/八字套環.png" alt="八字套環" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">八字套環</h4>
+                                <p class="text-sm text-gray-600">在繩索末端形成固定環圈，常用於連接設備或製作固定點。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot2.jpg/雙八字套環.png" alt="雙八字套環" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">雙八字套環</h4>
+                                <p class="text-sm text-gray-600">強化版八字套環，提供更高安全性，適合重要固定點使用。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 3: Securing Knots -->
+                    <div x-show="activeUnit === 3" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                        <h3 class="text-2xl font-semibold text-purple-800 mb-6 text-center">第三單元：固定繩結複習</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot3.jpg/二重繫船結.png" alt="二重繫船結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">二重繫船結</h4>
+                                <p class="text-sm text-gray-600">標準的繫船方式，可快速固定且容易解開，適合中等負重。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot3.jpg/三重繫船結.png" alt="三重繫船結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">三重繫船結</h4>
+                                <p class="text-sm text-gray-600">增強版繫船結，提供更高的安全性和穩定性，適合重要固定作業。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot3.jpg/座位席結.png" alt="座位席結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">座位席結</h4>
+                                <p class="text-sm text-gray-600">製作簡易安全吊帶，可承受人體重量，緊急救援時的重要技能。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot3.jpg/扁帶座位席結.png" alt="扁帶座位席結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">扁帶座位席結</h4>
+                                <p class="text-sm text-gray-600">使用扁帶製作的座位席結，分散壓力更舒適，承重能力更強。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot3.jpg/缠身結.png" alt="纏身結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">纏身結</h4>
+                                <p class="text-sm text-gray-600">全身安全束縛系統，提供多點固定，適合複雜救援環境。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 4: Advanced Techniques -->
+                    <div x-show="activeUnit === 4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                        <h3 class="text-2xl font-semibold text-purple-800 mb-6 text-center">第四單元：進階技巧複習</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot4.jpg/負荷釋放結.png" alt="負荷釋放結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">負荷釋放結</h4>
+                                <p class="text-sm text-gray-600">特殊救援結，可在承重狀態下快速解開，緊急脫困的重要技能。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot4.jpg/節結.png" alt="節結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">節結</h4>
+                                <p class="text-sm text-gray-600">用於縮短繩索長度或跳過繩索損壞部分，保持繩索功能性。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot4.jpg/繩盤結.png" alt="繩盤結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">繩盤結</h4>
+                                <p class="text-sm text-gray-600">整齊收納長繩索的技巧，防止糾結並便於快速部署使用。</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 hover:shadow-md transition duration-300">
+                                <img src="knot4.jpg/蝴蝶繩結.png" alt="蝴蝶繩結" class="w-full h-32 object-cover rounded-lg mb-3">
+                                <h4 class="font-semibold text-gray-800 mb-2">蝴蝶繩結</h4>
+                                <p class="text-sm text-gray-600">專業繩索收納方式，結合美觀與實用性，便於攜帶和使用。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Complete Section -->
+                    <div class="mt-12 text-center border-t pt-8">
+                        <div class="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-lg p-6 mb-6">
+                            <h3 class="text-xl font-semibold text-purple-800 mb-4">
+                                <i class="fas fa-lightbulb mr-2"></i>複習重點提醒
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-purple-700">
+                                <div class="text-left">
+                                    <h4 class="font-medium mb-2">安全原則：</h4>
+                                    <ul class="space-y-1">
+                                        <li>• 選擇適合的繩結類型</li>
+                                        <li>• 確保繩結完整正確</li>
+                                        <li>• 檢查承重能力</li>
+                                    </ul>
+                                </div>
+                                <div class="text-left">
+                                    <h4 class="font-medium mb-2">實用技巧：</h4>
+                                    <ul class="space-y-1">
+                                        <li>• 練習到能盲打</li>
+                                        <li>• 了解使用時機</li>
+                                        <li>• 定期檢查繩索狀況</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 mb-6">
+                            複習完成！現在您已經重新熟悉了23個救災繩結的功能和應用。
+                            準備好測試您的知識了嗎？
+                        </p>
+                        
+                        <a href="#quiz-section" class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-arrow-right mr-2"></i>開始知識測驗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Quiz Section -->
+    <section id="quiz-section" class="py-16 bg-gradient-to-br from-green-50 to-emerald-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">繩結知識測驗</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    測試您對救災繩結的理解程度，完成10道題目來檢驗學習成果
+                </p>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8" x-data="quizApp()">
+                    <!-- Quiz Header -->
+                    <div class="flex justify-between items-center mb-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-question-circle mr-1"></i>
+                                題目 <span x-text="currentQuestion + 1"></span> / 10
+                            </div>
+                            <div class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">
+                                <i class="fas fa-check-circle mr-1"></i>
+                                答對 <span x-text="score"></span> 題
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            進度：<span x-text="Math.round(((currentQuestion + 1) / 10) * 100)"></span>%
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-8">
+                        <div class="bg-blue-600 h-2 rounded-full transition-all duration-300" 
+                             :style="`width: ${((currentQuestion + 1) / 10) * 100}%`"></div>
+                    </div>
+
+                    <!-- Quiz Content -->
+                    <div x-show="!quizCompleted">
+                        <!-- Question -->
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-6" x-text="questions[currentQuestion].question"></h3>
+                            
+                            <!-- Options -->
+                            <div class="space-y-3">
+                                <template x-for="(option, index) in questions[currentQuestion].options" :key="index">
+                                    <button 
+                                        @click="selectAnswer(index)"
+                                        :class="selectedAnswer === index ? 'border-blue-500 bg-blue-50' : 'border-gray-200 hover:border-gray-300'"
+                                        class="w-full text-left p-4 border-2 rounded-lg transition duration-200"
+                                    >
+                                        <div class="flex items-center">
+                                            <div class="w-6 h-6 rounded-full border-2 mr-3 flex items-center justify-center"
+                                                 :class="selectedAnswer === index ? 'border-blue-500 bg-blue-500' : 'border-gray-300'">
+                                                <div x-show="selectedAnswer === index" class="w-2 h-2 bg-white rounded-full"></div>
+                                            </div>
+                                            <span x-text="option" class="text-gray-700"></span>
+                                        </div>
+                                    </button>
+                                </template>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="flex justify-between">
+                            <button 
+                                @click="previousQuestion()"
+                                x-show="currentQuestion > 0"
+                                class="px-6 py-2 bg-gray-300 hover:bg-gray-400 text-gray-700 rounded-lg transition duration-200"
+                            >
+                                <i class="fas fa-chevron-left mr-2"></i>上一題
+                            </button>
+                            <div x-show="currentQuestion === 0"></div>
+                            
+                            <button 
+                                @click="nextQuestion()"
+                                x-show="currentQuestion < 9"
+                                :disabled="selectedAnswer === null"
+                                :class="selectedAnswer === null ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'"
+                                class="px-6 py-2 text-white rounded-lg transition duration-200"
+                            >
+                                下一題<i class="fas fa-chevron-right ml-2"></i>
+                            </button>
+                            
+                            <button 
+                                @click="finishQuiz()"
+                                x-show="currentQuestion === 9"
+                                :disabled="selectedAnswer === null"
+                                :class="selectedAnswer === null ? 'bg-gray-300 cursor-not-allowed' : 'bg-green-600 hover:bg-green-700'"
+                                class="px-6 py-2 text-white rounded-lg transition duration-200"
+                            >
+                                完成測驗<i class="fas fa-flag-checkered ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Results -->
+                    <div x-show="quizCompleted" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100">
+                        <div class="text-center">
+                            <!-- Score Display -->
+                            <div class="mb-8">
+                                <div class="text-6xl font-bold mb-4" :class="score >= 8 ? 'text-green-600' : score >= 6 ? 'text-yellow-600' : 'text-red-600'">
+                                    <span x-text="score"></span>/10
+                                </div>
+                                <h3 class="text-2xl font-semibold mb-2" x-text="getResultTitle()"></h3>
+                                <p class="text-gray-600" x-text="getResultMessage()"></p>
+                            </div>
+
+                            <!-- Result Badge -->
+                            <div class="mb-8">
+                                <div class="inline-block px-6 py-3 rounded-full text-white font-semibold" 
+                                     :class="score >= 8 ? 'bg-green-500' : score >= 6 ? 'bg-yellow-500' : 'bg-red-500'">
+                                    <i :class="score >= 8 ? 'fas fa-trophy' : score >= 6 ? 'fas fa-medal' : 'fas fa-redo'" class="mr-2"></i>
+                                    <span x-text="getBadgeText()"></span>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="space-y-4">
+                                <button 
+                                    @click="resetQuiz()"
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition duration-200"
+                                >
+                                    <i class="fas fa-redo mr-2"></i>重新測驗
+                                </button>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <a href="#learning-outcomes" class="block bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg transition duration-200 text-center">
+                                        <i class="fas fa-video mr-2"></i>觀看教學影片
+                                    </a>
+                                    <button 
+                                        @click="showAnswers = !showAnswers"
+                                        class="bg-gray-600 hover:bg-gray-700 text-white py-3 px-6 rounded-lg transition duration-200"
+                                    >
+                                        <i class="fas fa-eye mr-2"></i>檢視正確答案
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Answer Review -->
+                            <div x-show="showAnswers" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="mt-8">
+                                <h4 class="text-lg font-semibold mb-4 text-gray-800">正確答案檢視</h4>
+                                <div class="space-y-4 text-left">
+                                    <template x-for="(question, index) in questions" :key="index">
+                                        <div class="border rounded-lg p-4" :class="userAnswers[index] === question.correct ? 'border-green-300 bg-green-50' : 'border-red-300 bg-red-50'">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <span class="font-medium text-sm text-gray-600">題目 <span x-text="index + 1"></span></span>
+                                                <span :class="userAnswers[index] === question.correct ? 'text-green-600' : 'text-red-600'">
+                                                    <i :class="userAnswers[index] === question.correct ? 'fas fa-check-circle' : 'fas fa-times-circle'"></i>
+                                                </span>
+                                            </div>
+                                            <p class="text-sm text-gray-700 mb-2" x-text="question.question"></p>
+                                            <p class="text-sm">
+                                                <span class="text-green-600 font-medium">正確答案：</span>
+                                                <span x-text="question.options[question.correct]"></span>
+                                            </p>
+                                            <div x-show="userAnswers[index] !== question.correct">
+                                                <p class="text-sm">
+                                                    <span class="text-red-600 font-medium">您的答案：</span>
+                                                    <span x-text="question.options[userAnswers[index]]"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Preparation Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">課前準備</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Tools and Materials -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="text-center mb-6">
+                            <div class="text-5xl text-orange-500 mb-4">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">工具材料</h3>
+                        </div>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-rope text-blue-500 mr-3"></i>
+                                二條四米繩
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-tape text-green-500 mr-3"></i>
+                                一條六米扁帶
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-link text-yellow-500 mr-3"></i>
+                                三個鉤環
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-string text-purple-500 mr-3"></i>
+                                一條細繩
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Background Knowledge -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="text-center mb-6">
+                            <div class="text-5xl text-blue-500 mb-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800">背景知識</h3>
+                        </div>
+                        <div class="text-gray-700 text-center">
+                            <p class="mb-4 text-lg">對繩結有興趣即可學習</p>
+                            <p class="text-sm text-gray-600">
+                                上課前需準備上述材料，無需特殊技能或經驗，
+                                我們將從基礎開始教學
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Achievements Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">上完課後你可以學到什麼</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 text-center">
+                        <div class="text-4xl text-red-600 mb-4">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3 text-gray-800">專業認證</h3>
+                        <p class="text-gray-600 text-sm">掌握紅十字會認證的救災繩結技能</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center">
+                        <div class="text-4xl text-blue-600 mb-4">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3 text-gray-800">實務應用</h3>
+                        <p class="text-gray-600 text-sm">能在救災現場快速打出正確的繩結</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center">
+                        <div class="text-4xl text-green-600 mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3 text-gray-800">安全保障</h3>
+                        <p class="text-gray-600 text-sm">了解各種繩結的安全係數與使用時機</p>
+                    </div>
+                </div>
+                
+                <!-- Quiz Call to Action -->
+                <div class="text-center mt-12">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">準備好測試您的繩結知識了嗎？</h3>
+                    <a href="#quiz-section" class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-quiz mr-2"></i>開始互動測驗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">適合對象</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                        <div class="text-4xl text-blue-600 mb-4">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">學生</h3>
+                        <p class="text-sm text-gray-600">對繩結有興趣的學生</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                        <div class="text-4xl text-green-600 mb-4">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">戶外愛好者</h3>
+                        <p class="text-sm text-gray-600">登山、露營等戶外活動愛好者</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                        <div class="text-4xl text-red-600 mb-4">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">救援志工</h3>
+                        <p class="text-sm text-gray-600">參與救災救援的志工</p>
+                    </div>
+
+                    <div class="text-center p-6 bg-white rounded-xl shadow-lg">
+                        <div class="text-4xl text-orange-600 mb-4">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-2">求生愛好者</h3>
+                        <p class="text-sm text-gray-600">喜愛學習求生技巧的人</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">救災隊必學的23個繩結</h3>
+                        <p class="text-gray-300 text-sm">
+                            由紅十字會推薦的專業救災繩結課程，
+                            致力於培養專業的救災人員和志工。
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">聯絡資訊</h4>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li><i class="fas fa-phone mr-2"></i>電話：02-1234-5678</li>
+                            <li><i class="fas fa-envelope mr-2"></i>信箱：info@knots23.org</li>
+                            <li><i class="fas fa-map-marker-alt mr-2"></i>地址：台北市中正區救災路123號</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">追蹤我們</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-300 hover:text-white text-2xl">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white text-2xl">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white text-2xl">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-8 border-gray-700">
+
+                <div class="text-center text-gray-400 text-sm">
+                    <p>&copy; 2024 救災隊必學的23個繩結. 版權所有.</p>
+                    <p class="mt-2">本課程由紅十字會認證，致力於推廣專業救災技能教育。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button 
+        id="scrollToTop" 
+        class="fixed bottom-8 right-8 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition duration-300 opacity-0 invisible"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 自定義腳本 -->
+    <script src="script.js"></script>
+</body>
+</html>
